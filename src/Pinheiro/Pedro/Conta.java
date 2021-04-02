@@ -5,34 +5,18 @@ public class Conta {
         return cliente;
     }
 
-    public int getNumero() {
-        return numero;
+    public int getid() {
+        return id;
     }
 
     //Atributos das classe
     private Usuario cliente;
     private double saldo;
-    private int numero;
+    private int id;
 
-    //Métodos da classe
-
-    //Construtor da classe
-    public Conta(String nomeCliente, double saldoInicial){
-        this.saldo = saldoInicial;
-        this.cliente = new Usuario(nomeCliente);
-        this.numero = 1234;
-    }
-    public Conta(String nomeCliente, String cpf){
-        this.cliente = new Usuario(nomeCliente);
-    }
-
-    public double getSaldo(){
-        return this.saldo;
-    }
-
+    //Operações
     public void depositar(double valor) {
-        //this.saldo = this.saldo + valor;
-        this.saldo += valor;
+        this.saldo+= valor;
     }
 
     public boolean sacar(double valor) {
@@ -56,12 +40,29 @@ public class Conta {
         System.out.println("Saldo atual: R$" + this.saldo);
     }
 
+
+
+
+    //Construtor da classe
+    public Conta(String nomeCliente, double saldoInicial){
+        this.saldo = saldoInicial;
+        this.cliente = new Usuario(nomeCliente);
+        this.id = 1234;
+    }
+    public Conta(String nomeCliente, String cpf){
+        this.cliente = new Usuario(nomeCliente);
+    }
+
+    public double getSaldo(){
+        return this.saldo;
+    }
+
     @Override
     public String toString() {
         return "Conta{" +
                 "cliente=" + cliente.toString() +
                 ", saldo=" + saldo +
-                ", numero=" + numero +
+                ", id=" + id +
                 '}';
     }
 }
