@@ -7,6 +7,7 @@ public abstract class Conta {
     private double saldo;
     private int id;
 
+    //Criando setter e getter para facilidade
     public double getSaldo() {
         return saldo;
     }
@@ -15,6 +16,7 @@ public abstract class Conta {
         this.saldo = saldo;
     }
 
+    //Criando setter e getter para facilidade
     public int getId() {
         return id;
     }

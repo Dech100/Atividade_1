@@ -8,7 +8,7 @@ public class Usuario extends Conta{
     private String senha;
     private String email;
 
-
+    //Criando setter e getter para facilidade
     public String getNome() {
         return nome;
     }
@@ -16,6 +16,7 @@ public class Usuario extends Conta{
         this.nome = nome;
     }
 
+    //Criando setter e getter para facilidade
     public String getSenha() {
         return senha;
     }
@@ -23,13 +24,15 @@ public class Usuario extends Conta{
         this.senha = senha;
     }
 
+    //Criando setter e getter para facilidade
     public String getEmail() {
         return email;
     }
     public void setEmail(String email) {
         this.email = email;
     }
-//Função para criação de conta
+
+    //Função para criação de conta
     public void criarconta(String nome, String senha, String email, int id, Double saldo){
         this.setNome(nome);
         this.setSenha(senha);
