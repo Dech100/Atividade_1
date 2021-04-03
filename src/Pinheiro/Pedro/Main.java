@@ -10,9 +10,9 @@ public class Main {
         Usuario conta1 = new Usuario();
         Usuario conta2 = new Usuario();
         Usuario conta3 = new Usuario();
-        conta1.criarconta("Wing","12345","f",5482,1000.0);
-        conta2.criarconta("Exia","12345","f",9542,250.0);
-        conta3.criarconta("Barbatos","12345","f",1500,3000.0);
+        conta1.criarconta("Wing","07041995","LeiaGundamWingGotL@plz.com",5482,1000.0);
+        conta2.criarconta("Exia","18092010","VejaGundam00@plz.com",9542,250.0);
+        conta3.criarconta("Barbatos","04102015","VejaGundamIBO@plz.com",1500,3000.0);
 
         conta1.toString();
         conta2.toString();
@@ -22,6 +22,7 @@ public class Main {
         System.out.println("Saldo de Wing= " + conta1.getSaldo());
         System.out.println("Saldo de Exia= " + conta2.getSaldo());
         System.out.println("Saldo de Barbatos= " + conta3.getSaldo());
+        System.out.println();
 
         Transacoes transacoes = new Transacoes();
         String qrCode1 = transacoes.gerarQrCode(conta1, 250.0);
@@ -33,6 +34,7 @@ public class Main {
         System.out.println(qrCode2);
         transacoes.pagamento(conta3, conta2, qrCode2);
 
+        System.out.println();
         System.out.println("Estado depois das transações:");
         System.out.println("Saldo de Wing= " + conta1.getSaldo());
         System.out.println("Saldo de Exia= " + conta2.getSaldo());

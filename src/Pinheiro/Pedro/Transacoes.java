@@ -12,7 +12,6 @@ public class Transacoes {
         //Verificar Saldo retornando se dá ou não para completar a transação
     private boolean verificarSaldo(Usuario usuario, Double valorDeTransacao){
         if (usuario.getSaldo() < valorDeTransacao){
-            System.out.println("Saldo não disponivel");
             return false;
         }else{
             return true;
